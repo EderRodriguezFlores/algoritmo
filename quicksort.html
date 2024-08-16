@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo Quicksort</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #28a745;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmo Quicksort</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es el Algoritmo Quicksort?</h2>
+        <p>Quicksort es un algoritmo de ordenamiento eficiente basado en la técnica de divide y vencerás. Fue desarrollado por Tony Hoare en 1960. Su principal ventaja es su eficiencia en la ordenación de grandes volúmenes de datos, con una complejidad promedio de O(n log n).</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Ordenamiento de Datos:</strong> Se utiliza para ordenar listas y arreglos de manera eficiente en diversos lenguajes de programación.</li>
+            <li><strong>Optimización de Consultas:</strong> Mejora la eficiencia en la búsqueda y recuperación de datos en estructuras como bases de datos.</li>
+            <li><strong>Algoritmos de Procesamiento:</strong> Se aplica en algoritmos que requieren ordenar datos como parte de su proceso de cálculo.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo Quicksort</h2>
+        <p>A continuación se muestra una implementación del algoritmo Quicksort en Python:</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def quicksort(arr):<br>
+    if len(arr) <= 1:<br>
+        return arr<br>
+    pivot = arr[len(arr) // 2]<br>
+    left = [x for x in arr if x < pivot]<br>
+    middle = [x for x in arr if x == pivot]<br>
+    right = [x for x in arr if x > pivot]<br>
+    return quicksort(left) + middle + quicksort(right)<br><br>
+# Ejemplo de uso<br>
+arr = [3, 6, 8, 10, 1, 2, 1]<br>
+sorted_arr = quicksort(arr)<br>
+print("Arreglo ordenado:", sorted_arr)
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Observa cómo el algoritmo Quicksort ordena los datos en la visualización interactiva a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para una visualización interactiva, que puede ser implementada usando JavaScript y bibliotecas como D3.js o p5.js para ilustrar el proceso de particionamiento y ordenamiento en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de Quicksort</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Es muy eficiente en promedio y suele ser más rápido que otros algoritmos de ordenamiento como el Merge Sort.</li>
+            <li>Requiere menos memoria adicional en comparación con otros algoritmos como el Merge Sort.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>En el peor de los casos (cuando los pivotes no se eligen bien), su complejidad puede degradarse a O(n^2).</li>
+            <li>Su rendimiento puede ser afectado por la elección del pivote y la estructura de los datos.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmo Quicksort - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

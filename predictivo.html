@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos Predictivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos Predictivos</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo Predictivo?</h2>
+        <p>Un algoritmo predictivo es un tipo de algoritmo utilizado para hacer predicciones sobre eventos futuros basados en datos históricos. Estos algoritmos emplean técnicas estadísticas, aprendizaje automático y modelado de datos para prever resultados y comportamientos futuros.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Predicción de Ventas:</strong> Se utiliza para anticipar las ventas futuras en función de datos históricos y factores estacionales.</li>
+            <li><strong>Detección de Fraude:</strong> Ayuda a identificar patrones sospechosos y posibles fraudes en transacciones financieras.</li>
+            <li><strong>Mantenimiento Predictivo:</strong> Permite prever fallos en equipos antes de que ocurran, basándose en el historial de funcionamiento y desgaste.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo Predictivo: Regresión Lineal</h2>
+        <p>La regresión lineal es una técnica comúnmente utilizada en algoritmos predictivos para modelar la relación entre una variable dependiente y una o más variables independientes.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python con Scikit-Learn):</strong>
+            <code>
+import numpy as np<br>
+from sklearn.linear_model import LinearRegression<br><br>
+# Datos de ejemplo<br>
+X = np.array([[1], [2], [3], [4], [5]])  # Variable independiente<br>
+y = np.array([2, 3, 5, 7, 11])  # Variable dependiente<br><br>
+# Crear y entrenar el modelo<br>
+model = LinearRegression()<br>
+model.fit(X, y)<br><br>
+# Realizar una predicción<br>
+new_value = np.array([[6]])<br>
+prediction = model.predict(new_value)<br>
+print("Predicción para el valor 6:", prediction[0])
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Interactúa con la visualización a continuación para ver cómo el modelo de regresión lineal ajusta los datos y realiza predicciones:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para una visualización interactiva, que puede ser implementada usando JavaScript y bibliotecas como D3.js o Plotly para ilustrar el ajuste del modelo y las predicciones en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos Predictivos</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten tomar decisiones informadas basadas en datos y tendencias.</li>
+            <li>Mejoran la eficiencia operativa y la planificación estratégica.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Dependientes de la calidad y cantidad de datos disponibles.</li>
+            <li>Requieren una interpretación cuidadosa y pueden ser sensibles a cambios en los datos.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Algoritmos Predictivos - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

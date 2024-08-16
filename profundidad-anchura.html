@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos de Búsqueda en Profundidad y Anchura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos de Búsqueda en Profundidad y Anchura</h1>
+    </header>
+
+    <div class="container">
+        <h2>Búsqueda en Profundidad (DFS)</h2>
+        <p>La búsqueda en profundidad (DFS, por sus siglas en inglés) es un algoritmo para recorrer o buscar en árboles o grafos. Comienza en el nodo raíz y explora lo más profundo posible a lo largo de cada rama antes de retroceder. Es útil para encontrar un camino entre dos nodos o para recorrer un grafo.</p>
+
+        <h2>¿Para Qué Sirve DFS?</h2>
+        <ul>
+            <li><strong>Exploración de Grafos:</strong> DFS se utiliza para explorar todos los nodos y aristas en un grafo.</li>
+            <li><strong>Resolución de Problemas:</strong> Se aplica en problemas como el juego de laberintos, búsqueda de rutas y resolución de rompecabezas.</li>
+            <li><strong>Verificación de Conectividad:</strong> Determina si un grafo es conexo o no.</li>
+        </ul>
+
+        <h2>Ejemplo de DFS</h2>
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def dfs(graph, start, visited=None):<br>
+    if visited is None:<br>
+        visited = set()<br>
+    visited.add(start)<br>
+    for next in graph[start] - visited:<br>
+        dfs(graph, next, visited)<br>
+    return visited<br><br>
+# Ejemplo de uso<br>
+graph = {'A': {'B', 'C'}, 'B': {'A', 'D', 'E'}, 'C': {'A', 'F'}, 'D': {'B'}, 'E': {'B', 'F'}, 'F': {'C', 'E'}}<br>
+print("DFS traversal starting from 'A':", dfs(graph, 'A'))
+            </code>
+        </div>
+
+        <h2>Búsqueda en Anchura (BFS)</h2>
+        <p>La búsqueda en anchura (BFS, por sus siglas en inglés) es un algoritmo para recorrer o buscar en árboles o grafos. Comienza en el nodo raíz y explora todos los nodos vecinos a nivel actual antes de pasar al siguiente nivel. Es útil para encontrar el camino más corto en grafos no ponderados.</p>
+
+        <h2>¿Para Qué Sirve BFS?</h2>
+        <ul>
+            <li><strong>Encontrar Caminos Cortos:</strong> BFS es ideal para encontrar la distancia mínima entre dos nodos en grafos no ponderados.</li>
+            <li><strong>Exploración de Grafos:</strong> Se utiliza para explorar todos los nodos de manera sistemática.</li>
+            <li><strong>Algoritmos de Redes:</strong> Se aplica en algoritmos de redes para encontrar rutas de comunicación.</li>
+        </ul>
+
+        <h2>Ejemplo de BFS</h2>
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+from collections import deque<br><br>
+def bfs(graph, start):<br>
+    visited = set()<br>
+    queue = deque([start])<br>
+    while queue:<br>
+        vertex = queue.popleft()<br>
+        if vertex not in visited:<br>
+            visited.add(vertex)<br>
+            queue.extend(graph[vertex] - visited)<br>
+    return visited<br><br>
+# Ejemplo de uso<br>
+graph = {'A': {'B', 'C'}, 'B': {'A', 'D', 'E'}, 'C': {'A', 'F'}, 'D': {'B'}, 'E': {'B', 'F'}, 'F': {'C', 'E'}}<br>
+print("BFS traversal starting from 'A':", bfs(graph, 'A'))
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Observa cómo los algoritmos DFS y BFS exploran un grafo en la visualización interactiva a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para una visualización interactiva. Puedes utilizar JavaScript con bibliotecas como D3.js o Cytoscape.js para ilustrar el proceso de búsqueda en profundidad y en anchura en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas</h2>
+        <p><strong>DFS:</strong></p>
+        <ul>
+            <li>Ventajas: Puede encontrar una solución más rápidamente en algunos casos y es útil para problemas de recorrido completo.</li>
+            <li>Desventajas: No garantiza la solución más corta y puede usar mucha memoria en grafos grandes.</li>
+        </ul>
+        <p><strong>BFS:</strong></p>
+        <ul>
+            <li>Ventajas: Garantiza encontrar el camino más corto en grafos no ponderados y es útil para encontrar la distancia mínima.</li>
+            <li>Desventajas: Puede ser menos eficiente en términos de memoria en comparación con DFS.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos de Búsqueda en Profundidad y Anchura - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

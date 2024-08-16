@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos Cualitativos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos Cualitativos</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo Cualitativo?</h2>
+        <p>Un algoritmo cualitativo es un procedimiento que se centra en la calidad de los datos en lugar de su cantidad. A diferencia de los algoritmos cuantitativos que trabajan con números y estadísticas, los algoritmos cualitativos se ocupan de analizar y procesar datos no numéricos, como textos y categorías, para extraer patrones, tendencias y significados.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Análisis de Datos Textuales:</strong> Utilizado para analizar grandes volúmenes de texto, como comentarios en redes sociales o respuestas de encuestas, para identificar temas y sentimientos.</li>
+            <li><strong>Procesamiento de Lenguaje Natural:</strong> Mejora la comprensión y generación del lenguaje humano en aplicaciones como chatbots y sistemas de recomendación.</li>
+            <li><strong>Clasificación de Información:</strong> Categoriza y organiza información en grupos o clases basados en características cualitativas.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo Cualitativo: Análisis de Sentimientos</h2>
+        <p>El análisis de sentimientos es una técnica de procesamiento de lenguaje natural que determina la actitud de un texto, clasificándolo como positivo, negativo o neutral.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python con TextBlob):</strong>
+            <code>
+from textblob import TextBlob<br><br>
+def analyze_sentiment(text):<br>
+    blob = TextBlob(text)<br>
+    sentiment = blob.sentiment.polarity<br>
+    if sentiment > 0:<br>
+        return "Positivo"<br>
+    elif sentiment < 0:<br>
+        return "Negativo"<br>
+    else:<br>
+        return "Neutral"<br><br>
+# Ejemplo de uso<br>
+text = "¡Me encanta este producto! Es realmente bueno."<br>
+print("Sentimiento del texto:", analyze_sentiment(text))
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Para explorar cómo el análisis de sentimientos clasifica diferentes textos, interactúa con la visualización a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está destinado para una visualización interactiva que podría ser creada usando JavaScript para mostrar cómo se analizan diferentes textos en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos Cualitativos</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten una comprensión profunda de los datos no numéricos.</li>
+            <li>Utilizados en aplicaciones como análisis de sentimientos y procesamiento de texto.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Menos precisos que los algoritmos cuantitativos en ciertos contextos.</li>
+            <li>Pueden ser complejos de implementar y requerir recursos computacionales significativos.</li>
+        </ul>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos Cualitativos - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión Maestro</title>
+    <link rel="stylesheet" href="inicio_de_sesion_maestro.css">
+</head>
+<body>
+    <div class="formulario">
+        <h1>Inicia sesión Maestro</h1>
+        <form method="post">
+            <div class="username">
+                <input type="email" required>
+                <label>Ingresa tu numero de Matricula</label>
+            </div>
+            <div class="username">
+                <input type="password" required>
+                <label>Ingresa la Contraseña</label>
+            </div>
+            <div class="recordar">¿Olvido su contraseña?</div>
+            <button class="button">Iniciar</button>
+            <div class="registrarse">
+                <a href="#">REGISTRARME</a>
+            </div>
+        </form>
+    </div>
+    <p>Esta página ha sido visitada <span id="contador">0</span> veces.</p>
+
+    <script>
+        // Obtener el contador actual almacenado en localStorage
+        let contadorActual = localStorage.getItem('contador');
+
+        // Si no hay contador almacenado, inicializarlo a 0
+        if (contadorActual === null) {
+            contadorActual = 0;
+        } else {
+            // Incrementar el contador
+            contadorActual = parseInt(contadorActual) + 1;
+        }
+
+        // Actualizar el contador en la página
+        document.getElementById('contador').textContent = contadorActual;
+
+        // Almacenar el nuevo contador en localStorage
+        localStorage.setItem('contador', contadorActual.toString());
+    </script>
+</body>
+</html>

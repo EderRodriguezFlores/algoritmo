@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Optimización</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: square;
+            margin: 10px 0;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e9f7f9;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmo de Optimización</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo de Optimización?</h2>
+        <p>Un algoritmo de optimización es un proceso diseñado para encontrar la mejor solución posible a un problema, dado un conjunto de restricciones y objetivos. Estos algoritmos buscan maximizar o minimizar una función objetivo mediante métodos computacionales.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Mejora de Procesos:</strong> Se utilizan para optimizar procesos en industrias como la manufactura, logística y servicios.</li>
+            <li><strong>Problemas de Diseño:</strong> Ayudan en el diseño de sistemas, estructuras y productos para mejorar su eficiencia y eficacia.</li>
+            <li><strong>Optimización de Recursos:</strong> Utilizados para asignar recursos de manera eficiente en problemas de programación y planificación.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo de Optimización: Método de Gradiente Descendente</h2>
+        <p>El método de gradiente descendente es una técnica comúnmente utilizada para minimizar una función objetivo. Se basa en ajustar los parámetros en la dirección opuesta al gradiente de la función para encontrar el mínimo.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def gradient_descent(learning_rate, num_iterations):<br>
+    # Inicialización de parámetros<br>
+    theta = 0<br>
+    for _ in range(num_iterations):<br>
+        gradient = 2 * theta  # Derivada de la función objetivo<br>
+        theta = theta - learning_rate * gradient<br>
+    return theta<br><br>
+# Ejemplo de uso<br>
+theta_min = gradient_descent(0.1, 100)<br>
+print(theta_min)  # Output: Valor aproximado del mínimo
+            </code>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos de Optimización</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten encontrar soluciones eficientes en problemas complejos.</li>
+            <li>Ayudan a mejorar el rendimiento y la eficiencia en diversas aplicaciones.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Puede ser difícil garantizar que se encuentre el óptimo global.</li>
+            <li>Algunos métodos pueden ser costosos en términos de tiempo y recursos computacionales.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos de Optimización - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

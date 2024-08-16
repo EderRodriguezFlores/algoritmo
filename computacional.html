@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos Computacionales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #03a9f4;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos Computacionales</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo Computacional?</h2>
+        <p>Un algoritmo computacional es una secuencia de pasos definidos para realizar una tarea o resolver un problema mediante un proceso de computación. Estos algoritmos son fundamentales en la programación y en el diseño de sistemas para manejar y procesar datos.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Resolución de Problemas:</strong> Los algoritmos proporcionan soluciones paso a paso para una amplia gama de problemas, desde cálculos simples hasta problemas complejos de optimización.</li>
+            <li><strong>Automatización:</strong> Permiten la automatización de tareas repetitivas y procesos de toma de decisiones basados en datos.</li>
+            <li><strong>Optimización:</strong> Mejoran la eficiencia de los sistemas al encontrar soluciones óptimas a problemas como la búsqueda, el ordenamiento y la planificación.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo Computacional: Algoritmo de Búsqueda Binaria</h2>
+        <p>El algoritmo de búsqueda binaria es un método eficiente para encontrar un elemento en una lista ordenada. Funciona dividiendo repetidamente el intervalo de búsqueda a la mitad hasta encontrar el elemento.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def binary_search(arr, target):<br>
+    left, right = 0, len(arr) - 1<br>
+    while left <= right:<br>
+        mid = (left + right) // 2<br>
+        if arr[mid] == target:<br>
+            return mid<br>
+        elif arr[mid] < target:<br>
+            left = mid + 1<br>
+        else:<br>
+            right = mid - 1<br>
+    return -1<br><br>
+# Ejemplo de uso<br>
+arr = [1, 3, 5, 7, 9, 11, 13, 15]<br>
+target = 7<br>
+print("Índice del objetivo:", binary_search(arr, target))
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Para entender mejor cómo funciona el algoritmo de búsqueda binaria, explora la visualización interactiva a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Aquí podrías incluir una visualización interactiva utilizando JavaScript o herramientas como D3.js para mostrar cómo se divide el intervalo de búsqueda en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos Computacionales</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten la automatización de tareas complejas.</li>
+            <li>Mejoran la eficiencia de los sistemas mediante la optimización de procesos.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Algunos algoritmos pueden ser complejos de implementar y entender.</li>
+            <li>La eficiencia puede variar dependiendo del problema y del algoritmo utilizado.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos Computacionales - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

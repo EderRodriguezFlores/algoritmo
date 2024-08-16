@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Incursión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmo de Incursión</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo de Incursión?</h2>
+        <p>Un algoritmo de incursión (o recursión) es una técnica de resolución de problemas en la que una función se llama a sí misma para resolver subproblemas del problema principal. Esta metodología es fundamental en programación y matemáticas.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Resolución de Problemas Complejos:</strong> Permite simplificar problemas al descomponerlos en partes más manejables.</li>
+            <li><strong>Estructuras de Datos:</strong> Es útil para trabajar con estructuras jerárquicas como árboles y gráficos.</li>
+            <li><strong>Algoritmos de Búsqueda y Ordenación:</strong> Muchos algoritmos eficientes como quicksort y búsqueda binaria utilizan recursión.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo de Incursión: Cálculo de Factoriales</h2>
+        <p>El factorial de un número <code>n</code> (denotado como <code>n!</code>) es el producto de todos los enteros positivos menores o iguales a <code>n</code>.</p>
+
+        <div class="example">
+            <strong>Definición Matemática:</strong>
+            <p><code>n! = 
+                { 1, si n = 0
+                { n * (n-1)!, si n > 0
+            </code></p>
+        </div>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def factorial(n):<br>
+    # Caso base: el factorial de 0 o 1 es 1<br>
+    if n == 0 or n == 1:<br>
+        return 1<br>
+    # Caso recursivo: n! = n * (n-1)!<br>
+    else:<br>
+        return n * factorial(n - 1)<br><br>
+# Ejemplo de uso<br>
+print(factorial(5))  # Output: 120
+            </code>
+        </div>
+
+        <h2>Ventajas y Desventajas de la Recursión</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Simplicidad y elegancia en la solución de problemas.</li>
+            <li>Facilita la implementación de algoritmos complejos.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Uso de memoria adicional debido a las llamadas recursivas.</li>
+            <li>Puede ser menos eficiente que las soluciones iterativas en algunos casos.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos de Incursión - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

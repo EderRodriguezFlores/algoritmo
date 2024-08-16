@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos de Probabilidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #28a745;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos de Probabilidad</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo de Probabilidad?</h2>
+        <p>Un algoritmo de probabilidad es un procedimiento utilizado para calcular y analizar probabilidades y eventos estocásticos. Estos algoritmos se basan en principios de probabilidad para modelar situaciones donde el resultado no es determinista, sino que se basa en una serie de posibles resultados con diferentes probabilidades.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Predicción de Eventos:</strong> Utilizado para prever la probabilidad de que ocurran eventos futuros basados en datos históricos.</li>
+            <li><strong>Modelado de Riesgos:</strong> Permite la evaluación de riesgos y toma de decisiones en situaciones inciertas, como en finanzas y seguros.</li>
+            <li><strong>Simulación:</strong> Ayuda en la simulación de escenarios y en el análisis de sistemas complejos donde los resultados están sujetos al azar.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo de Probabilidad: Simulación de Lanzamiento de Dados</h2>
+        <p>La simulación de lanzamiento de dados es un ejemplo clásico para ilustrar la probabilidad. Se puede utilizar para estimar la probabilidad de obtener ciertos resultados al lanzar un dado justo.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+import random<br><br>
+def simulate_dice_rolls(num_rolls):<br>
+    results = {i: 0 for i in range(1, 7)}<br>
+    for _ in range(num_rolls):<br>
+        roll = random.randint(1, 6)<br>
+        results[roll] += 1<br>
+    return results<br><br>
+# Ejemplo de uso<br>
+num_rolls = 10000<br>
+simulation_results = simulate_dice_rolls(num_rolls)<br>
+print("Resultados de la simulación:", simulation_results)
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Interactúa con la visualización para ver cómo la distribución de los resultados de los dados se aproxima a la probabilidad teórica:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para una visualización interactiva que podría ser implementada utilizando JavaScript y bibliotecas como Chart.js o D3.js para mostrar la distribución de resultados en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos de Probabilidad</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten una mejor toma de decisiones en situaciones inciertas.</li>
+            <li>Útiles para modelar y predecir eventos aleatorios y analizar riesgos.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Requieren una comprensión sólida de los conceptos de probabilidad.</li>
+            <li>Los resultados pueden ser difíciles de interpretar sin un análisis adicional.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos de Probabilidad - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

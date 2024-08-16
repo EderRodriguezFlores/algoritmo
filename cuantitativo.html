@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos Cuantitativos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 8px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos Cuantitativos</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo Cuantitativo?</h2>
+        <p>Un algoritmo cuantitativo es un procedimiento que utiliza datos numéricos para realizar cálculos, análisis y tomar decisiones. Estos algoritmos se basan en estadísticas, matemáticas y datos cuantificables para resolver problemas y optimizar procesos.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Optimización:</strong> Se utilizan para encontrar la mejor solución posible a problemas complejos, como la optimización de rutas o la asignación de recursos.</li>
+            <li><strong>Análisis Predictivo:</strong> Permiten prever tendencias y comportamientos futuros basados en datos históricos.</li>
+            <li><strong>Modelado Matemático:</strong> Se aplican en el modelado de fenómenos naturales y económicos para predecir resultados y analizar patrones.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo Cuantitativo: Regresión Lineal</h2>
+        <p>La regresión lineal es un algoritmo cuantitativo utilizado para modelar la relación entre una variable dependiente y una o más variables independientes. Se usa para prever valores y entender la relación entre las variables.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python con Scikit-Learn):</strong>
+            <code>
+from sklearn.linear_model import LinearRegression<br>
+import numpy as np<br><br>
+# Datos de ejemplo<br>
+X = np.array([[1], [2], [3], [4], [5]])  # Variable independiente<br>
+y = np.array([2, 4, 6, 8, 10])  # Variable dependiente<br><br>
+# Crear el modelo de regresión lineal<br>
+model = LinearRegression()<br>
+model.fit(X, y)<br><br>
+# Predecir un nuevo valor<br>
+new_value = np.array([[6]])<br>
+prediction = model.predict(new_value)<br>
+print("Predicción para el valor 6:", prediction[0])
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Explora cómo la regresión lineal ajusta una línea a los datos en la visualización interactiva a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para incluir una visualización dinámica que podría ser creada con JavaScript y bibliotecas como D3.js o Plotly para mostrar cómo el algoritmo de regresión lineal ajusta una línea a los datos.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos Cuantitativos</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Permiten el análisis detallado y preciso de datos numéricos.</li>
+            <li>Son fundamentales para la toma de decisiones basada en datos y la optimización de procesos.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Dependientes de la calidad y cantidad de datos disponibles.</li>
+            <li>Pueden ser complejos de implementar y requieren una comprensión sólida de matemáticas y estadísticas.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos Cuantitativos - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

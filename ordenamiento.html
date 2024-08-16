@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos de Ordenamiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #28a745;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #e8f5e9;
+            border-left: 4px solid #28a745;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .interactive-example {
+            background-color: #e3f2fd;
+            border-left: 4px solid #03a9f4;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Algoritmos de Ordenamiento</h1>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es un Algoritmo de Ordenamiento?</h2>
+        <p>Un algoritmo de ordenamiento es un procedimiento utilizado para reorganizar una colección de elementos en un orden específico. Los algoritmos de ordenamiento son fundamentales en la informática para mejorar la eficiencia de la búsqueda y la manipulación de datos.</p>
+
+        <h2>¿Para Qué Sirve?</h2>
+        <ul>
+            <li><strong>Organización de Datos:</strong> Facilita la organización de datos en un formato ordenado, lo cual es crucial para búsquedas rápidas y eficientes.</li>
+            <li><strong>Optimización de Algoritmos:</strong> Muchos algoritmos complejos se benefician de datos ordenados para mejorar su rendimiento.</li>
+            <li><strong>Procesamiento de Datos:</strong> Utilizado en aplicaciones que requieren el análisis de grandes volúmenes de datos.</li>
+        </ul>
+
+        <h2>Ejemplo de Algoritmo de Ordenamiento: Ordenamiento por Inserción</h2>
+        <p>El algoritmo de ordenamiento por inserción (Insertion Sort) construye la secuencia ordenada un elemento a la vez, tomando cada elemento de la entrada y colocándolo en el lugar correcto dentro de la secuencia ordenada.</p>
+
+        <div class="example">
+            <strong>Implementación en Código (Python):</strong>
+            <code>
+def insertion_sort(arr):<br>
+    for i in range(1, len(arr)):<br>
+        key = arr[i]<br>
+        j = i - 1<br>
+        # Mover los elementos de arr[0..i-1], que son mayores que key,<br>
+        # a una posición adelante de su posición actual<br>
+        while j >= 0 and key < arr[j]:<br>
+            arr[j + 1] = arr[j]<br>
+            j -= 1<br>
+        arr[j + 1] = key<br><br>
+# Ejemplo de uso<br>
+arr = [12, 11, 13, 5, 6]<br>
+insertion_sort(arr)<br>
+print("Lista ordenada:", arr)
+            </code>
+        </div>
+
+        <h2>Visualización Interactiva</h2>
+        <p>Para comprender mejor el funcionamiento de los algoritmos de ordenamiento, puedes interactuar con la visualización a continuación:</p>
+        <div class="interactive-example">
+            <p><strong>Nota:</strong> Este espacio está reservado para incluir una visualización interactiva utilizando herramientas como D3.js o bibliotecas de gráficos en JavaScript para demostrar cómo funciona el algoritmo de ordenamiento en tiempo real.</p>
+        </div>
+
+        <h2>Ventajas y Desventajas de los Algoritmos de Ordenamiento</h2>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Mejoran la eficiencia en la búsqueda y manipulación de datos.</li>
+            <li>Hay diversos algoritmos adecuados para diferentes necesidades y tipos de datos.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Algunos algoritmos tienen complejidades de tiempo altas, como O(n²) en el caso de ordenamiento por inserción.</li>
+            <li>Elegir el algoritmo adecuado requiere comprensión del contexto y los datos.</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>© 2024 Algoritmos de Ordenamiento - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
